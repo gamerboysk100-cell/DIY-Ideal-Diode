@@ -5,19 +5,19 @@ If you’ve spent any time in the world of high-power electronics, you know the 
 
 In this guide, we are going to build an **Ideal Diode** circuit using P-Channel MOSFETs. This project virtually eliminates that voltage drop, ensuring your power delivery is as efficient as possible.
 
-The Problem: The 0.7V Voltage Drop
+**The Problem: The 0.7V Voltage Drop**
 Standard diodes, like the 1N5408 or the 20N10, rely on a P-N junction that requires a specific "forward voltage" to conduct. This drop is inherent to the physics of the semiconductor. When you’re running a 12V battery system, losing nearly a volt means your components are seeing less power, and your diode is getting hot enough to require a heatsink.
 <img width="1923" height="1080" alt="1000078671" src="https://github.com/user-attachments/assets/b74a6312-0734-4131-ab72-51a18e012085" />
 
-The Solution: The MOSFET Switch
+**The Solution: The MOSFET Switch**
 By using a P-Channel MOSFET (like the **AOD409**), we can bypass the physics of a standard diode. MOSFETs have a property called R_{DS(on)}—an extremely low "ON" resistance. Instead of a fixed voltage drop, we treat the MOSFET as a very fast, very efficient switch.
 <img width="1921" height="1080" alt="1000078672" src="https://github.com/user-attachments/assets/2acafe57-6b86-4cfb-a7d8-5564b4773484" />
 
-Voltage Drop
-Diode ~0.7V to 1.1V 
-MOSFETs ~0.01V to 0.05V
+**Voltage Drop
+Diode ~0.7V to 1.1V**
+**MOSFETs ~0.01V to 0.05V**
 
-Designing the Hardware
+**Designing the Hardware**
 The heart of this build is the **AOD409**, a 60V P-Channel MOSFET in a TO-252 package. It can handle up to -26A of continuous drain current.
 To make this work as a diode, we connect the Gate to Ground through a 1k resistor. To ensure the Gate-to-Source voltage (V_{GS}) doesn't exceed its limits (which could fry the MOSFET), we add a 12V Zener diode for protection.
 
