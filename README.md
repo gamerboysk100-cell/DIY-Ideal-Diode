@@ -1,4 +1,5 @@
 **DIY Ideal Diode: Achieve 0V Drop with P-Channel MOSFETs**
+<img width="1369" height="768" alt="1000075040" src="https://github.com/user-attachments/assets/cfce940f-66fb-464e-a069-ca769af735bd" />
 
 If you’ve spent any time in the world of high-power electronics, you know the frustration of the "Diode Tax." You design a high-efficiency system, only to lose 0.7V to 1V across a standard silicon diode used for reverse polarity protection. That might not sound like much, but at 10A, you’re looking at 7W–10W of pure heat.
 
@@ -6,9 +7,11 @@ In this guide, we are going to build an **Ideal Diode** circuit using P-Channel 
 
 The Problem: The 0.7V Voltage Drop
 Standard diodes, like the 1N5408 or the 20N10, rely on a P-N junction that requires a specific "forward voltage" to conduct. This drop is inherent to the physics of the semiconductor. When you’re running a 12V battery system, losing nearly a volt means your components are seeing less power, and your diode is getting hot enough to require a heatsink.
+<img width="1923" height="1080" alt="1000078671" src="https://github.com/user-attachments/assets/b74a6312-0734-4131-ab72-51a18e012085" />
 
 The Solution: The MOSFET Switch
 By using a P-Channel MOSFET (like the **AOD409**), we can bypass the physics of a standard diode. MOSFETs have a property called R_{DS(on)}—an extremely low "ON" resistance. Instead of a fixed voltage drop, we treat the MOSFET as a very fast, very efficient switch.
+<img width="1921" height="1080" alt="1000078672" src="https://github.com/user-attachments/assets/2acafe57-6b86-4cfb-a7d8-5564b4773484" />
 
 Voltage Drop
 Diode ~0.7V to 1.1V 
@@ -20,8 +23,11 @@ To make this work as a diode, we connect the Gate to Ground through a 1k resisto
 
 Manufacturing and Professional Assembly
 When dealing with high-current paths, the quality of your PCB is critical. I designed a custom board for this project to ensure the traces could handle the load without over-heating.
+<img width="1892" height="1079" alt="1000078676" src="https://github.com/user-attachments/assets/286156a3-3fb9-4ce8-911e-65584bdc09ef" />
 
 I always order my boards from JLCPCB, and for this project, I used their one-stop service. One thing I highly recommend—and what I did here—is ordering the *SMT Stencil together with the PCBs. It only costs a few extra dollars, but it changes the entire assembly experience.
+<img width="1868" height="1080" alt="1000078674" src="https://github.com/user-attachments/assets/ede15636-4693-497d-8c06-0e501c9e9948" />
+<img width="1875" height="1079" alt="1000078675" src="https://github.com/user-attachments/assets/21901523-76ab-486f-bd31-da86e16f5136" />
 
 Link: I Order PCB and Stencil from JLCPCB, Track Your JLCPCB Orders and Shipments with JLCONE (Desktop or Mobile App) Download Here : https://jlcpcb.com/download?from=JLA
 
@@ -31,12 +37,14 @@ Step-by-Step Build Process
 
  1. Solder Paste Application
 Secure your PCB on your workbench. Align the laser-cut stencil from JLCPCB over the pads. Using a small spatula (or even an old credit card), spread the solder paste across the stencil. When you lift the stencil, you'll see perfectly defined paste "bricks" on every pad.
+<img width="1927" height="1080" alt="1000078677" src="https://github.com/user-attachments/assets/4d10fa11-f758-4979-af04-cdcdc45532e2" />
 
 2. Component Placement
 Using tweezers, place your four AOD409 MOSFETs, the 1k Ohm resistor, and the Zener diode. Because the solder paste is tacky, it holds the components in place, which is helpful if you’re using a hot air station.
 
 3. Reflow Soldering
 I used a hot air station set to approximately 250°C. Watch as the dull grey paste turns into shiny liquid silver. The surface tension of the molten solder will actually pull the components into perfect alignment—this is the most satisfying part of the build!
+<img width="1902" height="1080" alt="1000078678" src="https://github.com/user-attachments/assets/11803416-4d26-41bd-8658-bcc32acd00b5" />
 
 Real-World Performance Testing
 To prove the "Ideal" nature of this circuit, I ran a side-by-side test using a high-speed DC fan as a load.
