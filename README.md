@@ -6,10 +6,12 @@ If you’ve spent any time in the world of high-power electronics, you know the 
 In this guide, we are going to build an **Ideal Diode** circuit using P-Channel MOSFETs. This project virtually eliminates that voltage drop, ensuring your power delivery is as efficient as possible.
 
 **The Problem: The 0.7V Voltage Drop**
+
 Standard diodes, like the 1N5408 or the 20N10, rely on a P-N junction that requires a specific "forward voltage" to conduct. This drop is inherent to the physics of the semiconductor. When you’re running a 12V battery system, losing nearly a volt means your components are seeing less power, and your diode is getting hot enough to require a heatsink.
 <img width="1923" height="1080" alt="1000078671" src="https://github.com/user-attachments/assets/b74a6312-0734-4131-ab72-51a18e012085" />
 
 **The Solution: The MOSFET Switch**
+
 By using a P-Channel MOSFET (like the **AOD409**), we can bypass the physics of a standard diode. MOSFETs have a property called R_{DS(on)}—an extremely low "ON" resistance. Instead of a fixed voltage drop, we treat the MOSFET as a very fast, very efficient switch.
 <img width="1921" height="1080" alt="1000078672" src="https://github.com/user-attachments/assets/2acafe57-6b86-4cfb-a7d8-5564b4773484" />
 
@@ -18,8 +20,10 @@ Diode ~0.7V to 1.1V**
 **MOSFETs ~0.01V to 0.05V**
 
 **Designing the Hardware**
+
 The heart of this build is the **AOD409**, a 60V P-Channel MOSFET in a TO-252 package. It can handle up to -26A of continuous drain current.
 To make this work as a diode, we connect the Gate to Ground through a 1k resistor. To ensure the Gate-to-Source voltage (V_{GS}) doesn't exceed its limits (which could fry the MOSFET), we add a 12V Zener diode for protection.
+<img width="1080" height="577" alt="1000078673" src="https://github.com/user-attachments/assets/6da98dbb-0aaf-4f3b-a021-daf9a5f9b82c" />
 
 Manufacturing and Professional Assembly
 When dealing with high-current paths, the quality of your PCB is critical. I designed a custom board for this project to ensure the traces could handle the load without over-heating.
@@ -33,7 +37,7 @@ Link: I Order PCB and Stencil from JLCPCB, Track Your JLCPCB Orders and Shipment
 
 Instead of struggling with a soldering iron and potentially creating bridges on the SMD pads, you just align the stencil, swipe your SN63PB37 solder paste across it, and you have a perfect, factory-level application. If you’re curious about how it looks, you can check out the JLCPCBs JLCONE App it’s actually pretty handy for tracking your manufacturing progress while you're away from your desk.
 
-Step-by-Step Build Process
+**Step-by-Step Build Process**
 
  1. Solder Paste Application
 Secure your PCB on your workbench. Align the laser-cut stencil from JLCPCB over the pads. Using a small spatula (or even an old credit card), spread the solder paste across the stencil. When you lift the stencil, you'll see perfectly defined paste "bricks" on every pad.
