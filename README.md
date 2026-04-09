@@ -30,8 +30,10 @@ When dealing with high-current paths, the quality of your PCB is critical. I des
 <img width="1892" height="1079" alt="1000078676" src="https://github.com/user-attachments/assets/286156a3-3fb9-4ce8-911e-65584bdc09ef" />
 
 I always order my boards from JLCPCB, and for this project, I used their one-stop service. One thing I highly recommend—and what I did here—is ordering the *SMT Stencil together with the PCBs. It only costs a few extra dollars, but it changes the entire assembly experience.
-<img width="1868" height="1080" alt="1000078674" src="https://github.com/user-attachments/assets/ede15636-4693-497d-8c06-0e501c9e9948" />
+
 <img width="1875" height="1079" alt="1000078675" src="https://github.com/user-attachments/assets/21901523-76ab-486f-bd31-da86e16f5136" />
+
+<img width="1868" height="1080" alt="1000078674" src="https://github.com/user-attachments/assets/ede15636-4693-497d-8c06-0e501c9e9948" />
 
 Link: I Order PCB and Stencil from JLCPCB, Track Your JLCPCB Orders and Shipments with JLCONE (Desktop or Mobile App) Download Here : https://jlcpcb.com/download?from=JLA
 
@@ -49,6 +51,8 @@ Using tweezers, place your four AOD409 MOSFETs, the 1k Ohm resistor, and the Zen
 3. Reflow Soldering
 I used a hot air station set to approximately 250°C. Watch as the dull grey paste turns into shiny liquid silver. The surface tension of the molten solder will actually pull the components into perfect alignment—this is the most satisfying part of the build!
 <img width="1902" height="1080" alt="1000078678" src="https://github.com/user-attachments/assets/11803416-4d26-41bd-8658-bcc32acd00b5" />
+
+<img width="1913" height="1080" alt="1000078679" src="https://github.com/user-attachments/assets/518fa808-17c3-432d-bd79-268c1479e9cf" />
 
 Real-World Performance Testing
 To prove the "Ideal" nature of this circuit, I ran a side-by-side test using a high-speed DC fan as a load.
